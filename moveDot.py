@@ -4,6 +4,27 @@
 작동한 코드의 오류줄번호없이 오류가 발생하여 어디서 난 오류인지 짐작이안됨.
 print두개로 감싸보며 오류난 영역을 확인해보려했으나 실패함.
 
+Traceback (most recent call last):
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\cbook\__init__.py", line 270, in process
+    func(*args, **kwargs)
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\animation.py", line 991, in _start
+    self._init_draw()
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\animation.py", line 1753, in _init_draw
+    self._draw_frame(next(self.new_frame_seq()))
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\animation.py", line 1776, in _draw_frame
+    self._drawn_artists = self._func(framedata, *self._args)
+TypeError: 'tuple' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\cbook\__init__.py", line 270, in process
+    func(*args, **kwargs)
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\animation.py", line 1291, in _on_resize
+    self._init_draw()
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\animation.py", line 1753, in _init_draw
+    self._draw_frame(next(self.new_frame_seq()))
+  File "C:\Users\bodle\AppData\Local\Programs\Python\Python38\lib\site-packages\matplotlib\animation.py", line 1776, in _draw_frame
+    self._drawn_artists = self._func(framedata, *self._args)
+TypeError: 'tuple' object is not callable
+
 ■코드목적
 지정한 사람의 수만큼 반복문을 돌려 점을찍고, 계속 반복해서 그 점에 대한 정보를 바꿔가며
 그래프 위에서 움직이도록 하고싶음.
